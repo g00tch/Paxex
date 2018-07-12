@@ -1,8 +1,8 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='paxex.conf'
-CONFIGFOLDER='/root/.paxex'
+CONFIG_FILE='PAXCHANGE.conf'
+CONFIGFOLDER='/root/.PAXCHANGE'
 COIN_DAEMON='paxchanged'
 COIN_CLI='paxchange-cli'
 COIN_PATH='/usr/local/bin/'
