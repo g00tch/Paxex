@@ -103,7 +103,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 `wget -q https://raw.githubusercontent.com/g00tch/Paxex/master/paxex_install.sh`
 
-![Example-RootPassEnter](https://i.imgur.com/I5k0HMd.png)
+![Example-RootPassEnter](https://i.imgur.com/bpNduaM.png)
 
 ***
 
