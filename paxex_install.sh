@@ -10,7 +10,7 @@ COIN_TGZ='https://github.com/paxex/paxchange/releases/download/untagged-e0e0941d
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Paxex'
 COIN_PORT=4133
-RPC_PORT=4134
+RPC_PORT=4132
 
 NODEIP=$(curl -s4 icanhazip.com)
 
