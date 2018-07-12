@@ -9,8 +9,8 @@ COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/paxex/paxchange/releases/download/untagged-e0e0941d004617ef49e6/linux-ubuntu1604.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Paxex'
-COIN_PORT=14133
-RPC_PORT=14132
+COIN_PORT=4133
+RPC_PORT=4134
 
 NODEIP=$(curl -s4 icanhazip.com)
 
