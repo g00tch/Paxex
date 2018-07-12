@@ -24,13 +24,14 @@ NC='\033[0m'
 MAG='\e[1;35m'
 
 purgeOldInstallation() {
-    echo -e "${GREEN}Congrats on gaining enough $COIN_NAME to own a Masternode!${NC}"
+    echo -e "${GREEN}Congrats on gaining enough ${RED}$COIN_NAME ${GREEN}to own a Masternode!${NC}"
     sleep 5s
-    echo -e "${GREEN}By installing the $COIN_NAME Masternode, you agree to HODL and not panic sell into buy lines.${NC}"
+    echo -e "${GREEN}By installing the ${RED}$COIN_NAME ${GREEN}Masternode, you agree to HODL and not panic sell into buy lines.${NC}"
     sleep 5s
-    echo -e "${GREEN}Panic selling will result in not getting the best possible Bitcoin ROI${NC}"
+    echo -e "${GREEN}Panic selling will result in not getting the best possible Bitcoin ROI for your coins.${NC}"
     sleep 5s
-    echo -e "${GREEN}Enough lecturing. On with the install!${NC}"
+    echo -e "${GREEN}That's enough lecturing. On with the install!${NC}"
+    sleep 5s
     #kill wallet daemon
     systemctl stop $COIN_NAME.service > /dev/null 2>&1
     sudo killall $COIN_DAEMON > /dev/null 2>&1
@@ -264,7 +265,7 @@ function important_information() {
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${RED}Donations aren't expected, but I did just save you a bunch of time ;)${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${YELLOW}Paxex Wallet: P8kpCep4TWFJPYbxJDaoF16KgvTpkZUcmg${NC}"
+ echo -e "${YELLOW}$COIN_NAME Wallet: P8kpCep4TWFJPYbxJDaoF16KgvTpkZUcmg${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
  }
