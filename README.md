@@ -100,7 +100,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 7***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
-![Example-RootPassEnter](https://i.imgur.com/K6xlnav.png)
+![Example-RootPassEnter](https://i.imgur.com/I5k0HMd.png)
 
 `wget -q https://raw.githubusercontent.com/g00tch/Paxex/master/paxex_install.sh`
 ***
