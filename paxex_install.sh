@@ -32,7 +32,6 @@ purgeOldInstallation() {
     sleep 5s
     echo -e "${GREEN}That's enough lecturing. On with the install!${NC}"
     sleep 2s
-    echo -e "${RED}And away we go!${NC}"
     #kill wallet daemon
     systemctl stop $COIN_NAME.service > /dev/null 2>&1
     sudo killall $COIN_DAEMON > /dev/null 2>&1
