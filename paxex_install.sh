@@ -31,7 +31,12 @@ purgeOldInstallation() {
     echo -e "${GREEN}Panic selling will result in not getting the best possible Bitcoin ROI for your coins.${NC}"
     sleep 5s
     echo -e "${GREEN}That's enough lecturing. On with the install!${NC}"
-    sleep 2s
+    sleep 1s
+    echo -e "${RED}3...
+    sleep 1s
+    echo -e "${RED}2...
+    sleep 1s
+    echo -e "${RED}1...
     #kill wallet daemon
     systemctl stop $COIN_NAME.service > /dev/null 2>&1
     sudo killall $COIN_DAEMON > /dev/null 2>&1
