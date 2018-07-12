@@ -100,9 +100,11 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 7***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
-![Example-RootPassEnter](https://i.imgur.com/I5k0HMd.png)
 
 `wget -q https://raw.githubusercontent.com/g00tch/Paxex/master/paxex_install.sh`
+
+![Example-RootPassEnter](https://i.imgur.com/I5k0HMd.png)
+
 ***
 
 ***Step 8***
@@ -197,6 +199,6 @@ Click "File Save"
 
 `paxchange-cli getinfo`
 
-*You should see ***status 9***
+*You should see ***Masternode Successfully Started***
 
 If you do, congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.
