@@ -263,7 +263,7 @@ function important_information() {
  echo -e "${GREEN}paxchange-cli getinfo. ${CYAN} Compare the Blocks line with the explorer to ensure the VPS is synced${NC}"
  echo -e "${GREEN}paxchange-cli masternode status${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${RED}Donations are not expected, but I did just save you a bunch of time ;)${NC}"
+ echo -e "${RED}Donations are not expected, but I did just save you a bunch of time :D${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${YELLOW}$COIN_NAME Wallet: P8kpCep4TWFJPYbxJDaoF16KgvTpkZUcmg${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
