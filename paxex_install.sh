@@ -250,7 +250,7 @@ function important_information() {
  echo -e "${GREEN}VPS_IP:${NC}${PURPLE}$NODEIP:$COIN_PORT${NC}"
  echo -e "${GREEN}MASTERNODE GENKEY is:${NC}${PURPLE}$COINKEY${NC}"
  echo -e "${BLUE}================================================================================================================================"
- echo -e "${CYAN}Ensure VPS wallet is fully ${RED}SYNCED ${NC}with the blockchain before starting Alias${NC}."
+ echo -e "${CYAN}Ensure VPS wallet is fully ${RED}SYNCED ${CYAN}with the blockchain ${RED}BEFORE STARTING ALIAS${NC}."
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
  echo -e "${GREEN}paxchange-cli getinfo. ${CYAN} Compare the Blocks line with the explorer to ensure the VPS is synced${NC}"
