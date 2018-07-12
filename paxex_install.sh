@@ -25,8 +25,11 @@ MAG='\e[1;35m'
 
 purgeOldInstallation() {
     echo -e "${GREEN}Congrats on gaining enough $COIN_NAME to own a Masternode!${NC}"
+    sleep 5s
     echo -e "${GREEN}By installing the $COIN_NAME Masternode, you agree to HODL and not panic sell into buy lines.${NC}"
+    sleep 5s
     echo -e "${GREEN}Panic selling will result in not getting the best possible Bitcoin ROI${NC}"
+    sleep 5s
     echo -e "${GREEN}Enough lecturing. On with the install!${NC}"
     #kill wallet daemon
     systemctl stop $COIN_NAME.service > /dev/null 2>&1
@@ -152,7 +155,7 @@ EOF
 
 
 function enable_firewall() {
-  echo -e "${PURPLE}Installing and setting up firewall to allow ingress on port ${GREEN}$COIN_PORT${NC}"
+  echo -e "${GREEN}Installing and setting up firewall to allow ingress on port ${PURPLE}$COIN_PORT${NC}"
   ufw allow $COIN_PORT/tcp comment "$COIN_NAME MN port" >/dev/null
   ufw allow ssh comment "SSH" >/dev/null 2>&1
   ufw limit ssh/tcp >/dev/null 2>&1
@@ -257,7 +260,7 @@ function important_information() {
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
  echo -e "${GREEN}paxchange-cli getinfo. ${CYAN} Compare the Blocks line with the explorer to ensure the VPS is synced${NC}"
- echo -e "${GREEN}paxchange-cli masternode status.${NC}"
+ echo -e "${GREEN}paxchange-cli masternode status${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${RED}Donations aren't expected, but I did just save you a bunch of time ;)${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
