@@ -51,7 +51,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
+  unrar $COIN_ZIP >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null 2>&1
@@ -64,19 +64,24 @@ function configure_systemd() {
 [Unit]
 Description=$COIN_NAME service
 After=network.target
+
 [Service]
 User=root
 Group=root
+
 Type=forking
 #PIDFile=$CONFIGFOLDER/$COIN_NAME.pid
+
 ExecStart=$COIN_PATH$COIN_DAEMON -daemon -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER
 ExecStop=-$COIN_PATH$COIN_CLI -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER stop
+
 Restart=always
 PrivateTmp=true
 TimeoutStopSec=60s
 TimeoutStartSec=10s
 StartLimitInterval=120s
 StartLimitBurst=5
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -143,7 +148,11 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
+
 #Addnodes
+
+
+
 EOF
 }
 
@@ -241,27 +250,28 @@ clear
 function important_information() {
  echo
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${GREEN}Windows Wallet Guide: ${PURPLE}https://github.com/g00tch/Paxex/blob/master/README.md${NC}"
+ echo -e "${PURPLE}Windows Wallet Guide. https://github.com/g00tch/Henga/master/README.md${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}$COIN_NAME Masternode is up and running listening on port${NC}${PURPLE}$COIN_PORT${NC}."
- echo -e "${GREEN}Configuration file is:${NC}${PURPLE}$CONFIGFOLDER/$CONFIG_FILE${NC}"
- echo -e "${GREEN}Start:${NC}${PURPLE}systemctl start $COIN_NAME.service${NC}"
- echo -e "${GREEN}Stop:${NC}${PURPLE}systemctl stop $COIN_NAME.service${NC}"
- echo -e "${GREEN}VPS_IP:${NC}${PURPLE}$NODEIP:$COIN_PORT${NC}"
+ echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
+ echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
+ echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
+ echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
  echo -e "${GREEN}MASTERNODE GENKEY is:${NC}${PURPLE}$COINKEY${NC}"
  echo -e "${BLUE}================================================================================================================================"
- echo -e "${CYAN}Ensure VPS wallet is fully ${RED}SYNCED ${NC}with the blockchain before starting Alias${NC}."
+ echo -e "${CYAN}Ensure Node is fully SYNCED with BLOCKCHAIN.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
- echo -e "${GREEN}paxchange-cli getinfo. ${CYAN} Compare the Blocks line with the explorer to ensure the VPS is synced${NC}"
- echo -e "${GREEN}paxchange-cli masternode status.${NC}"
+ echo -e "${GREEN}xbi-cli masternode status${NC}"
+ echo -e "${GREEN}xbi-cli getinfo.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${RED}Donations aren't expected, but I did just save you a bunch of time ;).${NC}"
+ echo -e "${RED}Donations always excepted gratefully.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${YELLOW}Paxex Wallet: P8kpCep4TWFJPYbxJDaoF16KgvTpkZUcmg${NC}"
+ echo -e "${YELLOW}Henga: B6q3pMccExvyejrGrB5tRLK12dhmuRBTFC${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
  }
+
 function setup_node() {
   get_ip
   create_config
@@ -271,8 +281,11 @@ function setup_node() {
   important_information
   configure_systemd
 }
+
+
 ##### Main #####
 clear
+
 purgeOldInstallation
 checks
 prepare_system
