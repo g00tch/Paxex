@@ -223,7 +223,7 @@ DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o D
 apt install -y software-properties-common >/dev/null 2>&1
 echo -e "${PURPLE}Adding Bitcoin PPA repository"
 apt-add-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
-echo -e "${GREEN}Installing required packages. &{RED}Not much longer now!${NC}"
+echo -e "${GREEN}Installing required packages. ${RED}Not much longer now!${NC}"
 apt-get update >/dev/null 2>&1
 apt-get install libzmq3-dev -y >/dev/null 2>&1
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
