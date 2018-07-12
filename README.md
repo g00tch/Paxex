@@ -113,7 +113,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 ***Step 9***
-* When prompted to enter your private key - press enter
+* When prompted to enter your Masternode GEN key, just press enter
 
 ![Example-installing](https://i.imgur.com/yUrGgjD.png)
 ***
