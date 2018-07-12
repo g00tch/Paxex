@@ -108,7 +108,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 ***Step 8***
-* Paste the code below into the Bitvise terminal then press enter
+* Paste the code below into the Bitvise terminal, and then press enter
 
 `bash paxex_install.sh`
 
@@ -117,7 +117,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 ***Step 9***
-* Sit back and wait for the install (this will take 10-20 mins)
+* Sit back and wait for the install (this will take between 1-10 minutes)
 ***
 
 ***Step 10***
