@@ -98,35 +98,27 @@ If you require further assistance contact the support team @ [Discord](https://d
 * Once you have clicked open it will open a security alert (click yes).  
 ***
 
+
 ***Step 7***
-* Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
-
-`wget -q https://raw.githubusercontent.com/g00tch/Paxex/master/paxex_install.sh`
-
-![Example-RootPassEnter](https://i.imgur.com/bpNduaM.png)
-
-***
-
-***Step 8***
 * Paste the code below into the Bitvise terminal, and then press enter
 
-`bash paxex_install.sh`
+`wget -q https://raw.githubusercontent.com/g00tch/Paxex/master/paxex_install.sh && bash paxex_install.sh`
 
 ![Example-Bash](https://i.imgur.com/E6s5rLY.png)
 
 ***
 
-***Step 9***
+***Step 8***
 * Sit back and wait for the install (this will take between 1-10 minutes)
 ***
 
-***Step 10***
+***Step 9***
 * When prompted to enter your private key - press enter
 
 ![Example-installing](https://i.imgur.com/yUrGgjD.png)
 ***
 
-***Step 11***
+***Step 10***
 * You will now see all of the relavant information for your server.
 * Keep this terminal open as we will need the info for the wallet setup.
 ![Example-installing](https://i.imgur.com/2bjryWI.png)
