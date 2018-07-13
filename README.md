@@ -194,8 +194,3 @@ Click "File Save"
 *You should see ***Masternode Successfully Started***
 
 If you do, congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.
-
-Donations are not required, but greatly appreciated :)
-
-Paxex Wallet: P8kpCep4TWFJPYbxJDaoF16KgvTpkZUcmg
-BTC Wallet: 1NcGHPgUQ6mkB1h8HLj9HceuL8uJEKnJ2a
